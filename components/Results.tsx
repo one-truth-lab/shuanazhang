@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import CardItem from './CardItem'
+import CopyLinkButton from './CopyLinkButton'
 import { Recommendation } from '@/lib/types'
 
 interface ResultsProps {
@@ -38,6 +39,12 @@ export default function Results({ recommendations, comboTip }: Readonly<ResultsP
       <div className="bg-slate-900 rounded-2xl p-5">
         <p className="text-amber-400 text-xs font-semibold mb-2 tracking-wide">💡 组合建议</p>
         <p className="text-slate-200 text-sm leading-relaxed">{comboTip}</p>
+      </div>
+
+      {/* Share */}
+      <div className="bg-slate-50 rounded-2xl p-5 text-center space-y-3">
+        <p className="text-slate-600 text-sm">觉得有用？把这个工具分享给刚来加拿大的朋友 →</p>
+        <CopyLinkButton />
       </div>
 
       <Link
