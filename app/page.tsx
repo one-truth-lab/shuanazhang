@@ -1,12 +1,18 @@
+import Link from 'next/link'
 import Quiz from '@/components/Quiz'
 
 export default function Home() {
   return (
     <div className="min-h-screen flex flex-col">
       <header className="bg-white border-b border-slate-200 px-4 py-4">
-        <div className="max-w-lg mx-auto flex items-baseline gap-2">
-          <span className="font-serif font-bold text-xl text-slate-900">刷哪张</span>
-          <span className="text-slate-400 text-sm">加拿大信用卡推荐</span>
+        <div className="max-w-lg mx-auto flex items-baseline justify-between">
+          <div className="flex items-baseline gap-2">
+            <span className="font-serif font-bold text-xl text-slate-900">刷哪张</span>
+            <span className="text-slate-400 text-sm">加拿大信用卡推荐</span>
+          </div>
+          <Link href="/cards" className="text-xs text-slate-400 hover:text-slate-600 transition-colors">
+            卡库总览 →
+          </Link>
         </div>
       </header>
 
