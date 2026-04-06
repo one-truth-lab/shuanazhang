@@ -1,36 +1,40 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 刷哪张
 
-## Getting Started
+加拿大信用卡推荐工具。4 个问题，精准匹配，结果秒出。
 
-First, run the development server:
+**Live:** https://shuanazhang.vercel.app
+
+## 功能
+
+- 问卷式推荐：居住时长、消费类别、超市偏好、信用记录、收入、月均消费 6 步筛选
+- 智能评分：按消费结构对卡库打分，自动过滤年费回本不划算的高费卡
+- 多样性去重：每个发卡行最多出现 1 张，避免推出同行重复卡
+- 组合建议：基于推荐结果分析卡组搭配，不提推荐列表以外的卡
+- 卡库总览：`/cards` 页面可浏览全部 20 张卡，按类别分组
+
+## 卡库分类
+
+| 类别 | 描述 |
+|------|------|
+| 新移民专属 | 无需加拿大信用记录，快速审批 |
+| 无年费日常 | 零门槛长期持有 |
+| 现金返还 | 有年费但高倍率返现 |
+| 旅行积分 | 积累里程 / Scene+ 积分 |
+| 高端卡 | 高年费高权益 |
+
+## 本地开发
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+访问 [http://localhost:3000](http://localhost:3000)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 技术栈
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Next.js 16 (App Router)
+- React 19
+- Tailwind CSS 4
+- TypeScript
+- 部署于 Vercel
