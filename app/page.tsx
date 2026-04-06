@@ -23,7 +23,7 @@ export default function Home() {
               找到最适合你的<br />加拿大信用卡
             </h1>
             <p className="text-slate-500 text-sm mt-2">
-              4 个问题，精准匹配 · 无需 AI · 结果秒出
+              4 个问题，精准匹配 · 结果秒出
             </p>
           </div>
           <Quiz />
